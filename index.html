@@ -3,23 +3,52 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>D3Times</title>
+  <title>Healthcare Versus Poverty by State</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/d3Style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/d3Style.css">
+  <style>
+    /* body { font: 12px Arial;}
 
+path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke:red;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+div.tooltip {	
+    position: absolute;			
+    text-align: center;			
+    width: 60px;					
+    height: 28px;					
+    padding: 2px;				
+    font: 12px sans-serif;		
+    background: lightsteelblue;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none
+  </style> */
 </head>
 
 <body>
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-12">
-        <h1>D3Times</h1>
+        <h1>Healthcare Vs. Poverty by State</h1>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12  col-md-9">
-        <div id="scatter">
+        <div class="chart">
+          
           <!-- We append our chart here. -->
         </div>
       </div>
@@ -27,18 +56,20 @@
     <div class="row">
       <div class="col-xs-12  col-md-9">
         <div class="article">
-          <h2>Correlations Discovered Between Health Risks and Age, Income</h2>
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor
-            quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-            ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <h2><b>Correlations Discovered Between Income and Access to Healthcare</b></h2>
+          <p>In this activity I created an interactive graph using D3 to plot the correlations between poverty level and access to healthcare by state.
+              Upon hovering over the markers, we can see the percentage of that states population that is in poverty and lacks healthcare. 
+          </p>
 
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor
-            quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-            ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <p>This graph gives us a good visualization of the states that struggle most to meet the healthcare needs of the most vulnerable people in our society.
+            This visualization could be used by states to compare their policies regarding healthcare provision and support for those in poverty to others who may
+            have more robust social support systems in place.   </p>
 
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor
-            quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-            ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <p>At a glance, we can see that the states with higher levels of poverty and higher levels of people without access to healthcare tend to be the states
+            with lower average income levels. Most of these states are located in the Southeast. We can also see that most of the states with lower levels of poverty
+            and lower levels of people without access to healthcare tend to be the states with higher average income levels. Most of these states are located in the Northeast. 
+            States with moderate levels of poverty and lack of access to healthcare tend to be in the Midwest. 
+          </p>
         </div>
       </div>
     </div>
@@ -50,8 +81,10 @@
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
   <script type="text/javascript" src="assets/js/app.js"></script>
 
 </body>

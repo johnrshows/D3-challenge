@@ -1,4 +1,4 @@
-.aText {
+  .aText { 
     font-family: sans-serif;
     font-size: 16px;
     text-anchor: middle;
@@ -21,9 +21,9 @@
   .inactive:hover {
     fill: #000;
     cursor: pointer;
-  }
+  } 
   
-  /* font size dependent on radius, see app.js */
+   font size dependent on radius, see app.js
   .stateText {
     font-family: sans-serif;
     fill: #fff;
@@ -31,7 +31,7 @@
   }
   
   .stateCircle {
-    fill: #89bdd3;
+    fill: #8a5654;
     stroke: #e3e3e3;
   }
   
@@ -53,7 +53,7 @@
   }
   
   /* Mobile Rules */
-  @media screen and (max-width: 530px) {
+  /* @media screen and (max-width: 530px) {
     .stateText {
       display: none;
     }
@@ -67,5 +67,4 @@
     .aText {
       font-size: 13px;
     }
-  }
-  
+  /* } */ 
